@@ -80,12 +80,11 @@ def parallelChunks(chunk_size):
     end_time = time.time()
     total_time = end_time - start_time
 
-    print(f"\nParallel Chunks Call (Chunk size: {chunk_size}): Total Execution Time: {total_time:.2f} seconds")
+    print(f"\nParallel Chunks Call (Chunk size: {chunk_size} out of {len(data_from_functionA)}): Total Execution Time: {total_time:.2f} seconds")
 
 
 if __name__ == "__main__":
-    # print("Calling Sequential Call:")
-    # sequentialCall()
+    sequentialCall()
     parallelChunks(1) # parallel all at once  
     parallelChunks(15) # parallel 15 days 
     parallelChunks(30) # parallel montly wise 
